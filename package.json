@@ -1,0 +1,19 @@
+{
+  "name": "sanity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dompurify": "^0.9.0",
+    "jsdom": "^11.1.0",
+    "micro": "^7.3.3",
+    "micro-cors": "0.0.4"
+  }
+}

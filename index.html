@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sanity</title>
+  </head>
+  <body>
+    <input type='file' />
+    <button>Submit</button>
+    <div class='result'></div>
+  </body>
+  <script type="text/javascript">
+    const sanity = 'http://localhost:3000'
+    const button = document.querySelector('button')
+    const input = document.querySelector('input')
+    const result = document.querySelector('.result')
+    button.addEventListener('click', () => {
+      const file = input.files[0]
+      if (!file) return false
+
+      fetch(sanity, {
+        method: "POST",
+        body: file
+      })
+      .then(res => res.text())
+      .then(text => { result.innerText = text })
+    })
+  </script>
+</html>
